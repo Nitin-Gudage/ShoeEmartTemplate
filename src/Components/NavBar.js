@@ -9,7 +9,7 @@ const NavBar = () => {
             <AppBar position="sticky" sx={{ bgcolor: 'white', color: 'black', mb: 2 }}>
                 <Container maxWidth="xl">
                     <Toolbar >
-                        <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                        <AdbIcon sx={{ mr: 1 }} />
                         <Typography
                             variant="h6"
                             component="a"
@@ -24,10 +24,6 @@ const NavBar = () => {
                         >
                             LOGO
                         </Typography>
-
-                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                        </Box>
-
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {pages.map((page) => (
                                 <Button

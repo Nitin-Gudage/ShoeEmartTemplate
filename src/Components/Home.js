@@ -42,10 +42,10 @@ const Home = () => {
 
     return (
         <Grid container justifyContent='center'>
-            <Grid item lg={8}>
-                <Grid container spacing={5}>
+            <Grid item lg={8} md={8}>
+                <Grid container spacing={5} justifyContent={'center'}>
                     {products.map((item, index) => (
-                        <Grid item lg={5} md={4} key={index}>
+                        <Grid item lg={5} md={5} key={index}>
                             <Container
                                 sx={{
                                     textAlign: 'center',
@@ -68,7 +68,7 @@ const Home = () => {
                                     sx={{
                                         display: 'block',
                                         maxWidth: '100%',
-                                        height: '52%'
+                                        height: '50%'
                                     }}
                                 />
                                 <Typography textTransform='capitalize' variant="h6" sx={{ mt: 1, mb: 0.5 }}>
@@ -83,7 +83,7 @@ const Home = () => {
                                     sx={{
                                         bgcolor: 'gray',
                                         textTransform: 'capitalize',
-                                        transition: 'all 0.3s ease',
+                                        transition: 'all 0.3s ease', mb:3,
                                         '&:hover': {
                                             backgroundColor: 'green',
                                         },
@@ -99,9 +99,9 @@ const Home = () => {
             </Grid>
             <Grid item lg={4} md={4} >
                 <Box sx={{ width: '100%' }}>
-                    <Typography variant="h4">Cart</Typography>
+                    <Typography variant="h4" textAlign='center'>Cart</Typography>
                     {cartList.length === 0 ? (
-                        <Typography variant="body1">Your cart is empty.</Typography>
+                        <Typography variant="body1" textAlign={'center'}>Your cart is empty...</Typography>
                     ) : (
                         cartList.map(item => (
                             <Card key={item.id} sx={{ mb: 2 }}>
